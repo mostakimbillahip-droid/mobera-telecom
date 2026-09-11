@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobera Telecom</title>
+<meta name="description" content="Mobera Telecom - সহজ রিচার্জ, সহজ ডিজিটাল সেবা">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,"Noto Sans Bengali",sans-serif;background:#f5f7fb;color:#172033}
+header{background:#fff;border-bottom:1px solid #e9edf4;position:sticky;top:0;z-index:10}
+.nav{max-width:1100px;margin:auto;padding:15px 20px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:24px;font-weight:800;color:#155eef}.logo span{color:#172033}
+nav a{margin-left:22px;text-decoration:none;color:#344054;font-weight:600}
+.btn{display:inline-block;border:0;border-radius:10px;padding:11px 18px;font-weight:700;cursor:pointer;text-decoration:none}
+.btn-primary{background:#155eef;color:white}.btn-light{background:#eef4ff;color:#155eef}
+.hero{background:linear-gradient(135deg,#155eef,#4f8cff);color:white}
+.hero-inner{max-width:1100px;margin:auto;padding:65px 20px;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.hero h1{font-size:44px;line-height:1.12;margin-bottom:16px}.hero p{font-size:18px;line-height:1.7;opacity:.95;margin-bottom:25px}
+.card{background:#fff;border-radius:18px;padding:25px;box-shadow:0 15px 40px rgba(16,24,40,.12)}
+.recharge h2{margin-bottom:18px}.field{margin-bottom:14px}.field label{display:block;font-size:14px;font-weight:700;margin-bottom:7px}
+input,select{width:100%;padding:13px;border:1px solid #d0d5dd;border-radius:9px;font-size:15px;outline:none}
+input:focus,select:focus{border-color:#155eef}
+.full{width:100%;margin-top:5px}
+.section{max-width:1100px;margin:auto;padding:55px 20px}
+.section h2{text-align:center;font-size:30px;margin-bottom:10px}.section-sub{text-align:center;color:#667085;margin-bottom:30px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.service{background:#fff;padding:25px;border-radius:16px;text-align:center;border:1px solid #edf0f5}
+.icon{font-size:34px;margin-bottom:12px}.service h3{margin-bottom:8px}.service p{color:#667085;font-size:14px;line-height:1.5}
+.offer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.offer{background:#fff;border-radius:16px;padding:22px;border:1px solid #edf0f5}.offer .tag{display:inline-block;background:#eaf2ff;color:#155eef;padding:5px 9px;border-radius:20px;font-size:12px;font-weight:bold;margin-bottom:12px}
+.offer h3{margin-bottom:8px}.offer p{color:#667085}.price{font-size:25px;font-weight:800;margin-top:15px}
+footer{background:#101828;color:#d0d5dd;margin-top:20px}.footer-inner{max-width:1100px;margin:auto;padding:35px 20px;text-align:center}.footer-logo{font-size:23px;font-weight:800;color:#fff;margin-bottom:8px}.copy{font-size:13px;margin-top:18px;color:#98a2b3}
+@media(max-width:800px){nav a{display:none}.hero-inner{grid-template-columns:1fr;padding:45px 20px}.hero h1{font-size:35px}.grid{grid-template-columns:repeat(2,1fr)}.offer-grid{grid-template-columns:1fr}}
+@media(max-width:480px){.grid{grid-template-columns:1fr}.nav{padding:13px 15px}.logo{font-size:21px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <div class="logo">Mobera <span>Telecom</span></div>
+    <nav>
+      <a href="#home">হোম</a><a href="#services">সেবা</a><a href="#offers">অফার</a>
+      <a class="btn btn-light" href="#">লগইন</a>
+    </nav>
+  </div>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <h1>সহজ রিচার্জ,<br>সহজ ডিজিটাল সেবা</h1>
+      <p>Mobera Telecom-এর মাধ্যমে দ্রুত ও সহজে মোবাইল রিচার্জ এবং বিভিন্ন ডিজিটাল সেবা ব্যবহারের একটি আধুনিক প্ল্যাটফর্ম।</p>
+      <a class="btn btn-light" href="#recharge">এখনই রিচার্জ করুন</a>
+    </div>
+    <div class="card recharge" id="recharge">
+      <h2>মোবাইল রিচার্জ</h2>
+      <div class="field"><label>মোবাইল নম্বর</label><input id="phone" type="tel" placeholder="01XXXXXXXXX"></div>
+      <div class="field"><label>অপারেটর</label>
+        <select id="operator"><option>Grameenphone</option><option>Robi</option><option>Banglalink</option><option>Airtel</option><option>Teletalk</option>
+        </select>
+      </div>
+      <div class="field"><label>টাকার পরিমাণ</label><input id="amount" type="number" placeholder="যেমন: ৫০"></div>
+      <button class="btn btn-primary full" onclick="recharge()">রিচার্জ করুন</button>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <h2>আমাদের সেবা</h2><p class="section-sub">ধাপে ধাপে আরও সেবা যুক্ত করা যাবে</p>
+  <div class="grid">
+    <div class="service"><div class="icon">📱</div><h3>মোবাইল রিচার্জ</h3><p>সব প্রধান অপারেটরে রিচার্জ।</p></div>
+    <div class="service"><div class="icon">🌐</div><h3>ইন্টারনেট প্যাক</h3><p>ডাটা ও ইন্টারনেট অফার।</p></div>
+    <div class="service"><div class="icon">💳</div><h3>বিল পেমেন্ট</h3><p>পরবর্তীতে বিভিন্ন বিল পেমেন্ট যুক্ত করা যাবে।</p></div>
+    <div class="service"><div class="icon">👤</div><h3>ইউজার অ্যাকাউন্ট</h3><p>লগইন, ব্যালেন্স ও হিস্ট্রি—পরের ধাপে।</p></div>
+  </div>
+</section>
+
+<section class="section" id="offers">
+  <h2>জনপ্রিয় অফার</h2><p class="section-sub">এগুলো এখন ডেমো—পরে আসল অফার/দাম যুক্ত করা যাবে</p>
+  <div class="offer-grid">
+    <div class="offer"><span class="tag">Demo Offer</span><h3>ডাটা প্যাক</h3><p>ইন্টারনেট প্যাকের জন্য জায়গা</p><div class="price">৳ ৯৯</div></div>
+    <div class="offer"><span class="tag">Demo Offer</span><h3>মিনিট প্যাক</h3><p>ভয়েস মিনিট অফারের জন্য জায়গা</p><div class="price">৳ ৭৯</div></div>
+    <div class="offer"><span class="tag">Demo Offer</span><h3>কম্বো প্যাক</h3><p>ডাটা + মিনিট অফারের জন্য জায়গা</p><div class="price">৳ ১৯৯</div></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Mobera Telecom</div>
+    <div>সহজ সংযোগ, সহজ সেবা</div>
+    <div class="copy">© 2026 Mobera Telecom. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+function recharge(){
+  const phone=document.getElementById('phone').value.trim();
+  const amount=document.getElementById('amount').value.trim();
+  if(!/^01\d{9}$/.test(phone)){alert('সঠিক ১১ সংখ্যার মোবাইল নম্বর দিন।');return;}
+  if(!amount || Number(amount)<=0){alert('রিচার্জের টাকার পরিমাণ দিন।');return;}
+  alert('এটি একটি Demo। Backend ও Payment API যুক্ত করার পর আসল রিচার্জ হবে।');
+}
+</script>
+</body>
+</html>
